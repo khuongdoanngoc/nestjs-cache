@@ -11,10 +11,8 @@ export class AppService {
         if (cachedData) {
             return cachedData;
         }
-
         // Fetch data from database or other sources
         const newData = { message: 'Hello, World!' };
-
         // Cache the new data
         await this.cacheManager.set('myKey', newData, 60000);
 
